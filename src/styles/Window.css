@@ -1,0 +1,33 @@
+.maximized{
+    position: fixed;
+    top: 0px !important;
+    left: 0px !important;
+    border: none;
+    border-radius: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    padding: 70px !important;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    transition: all 0.8s;
+    overflow-y: auto !important;
+}
+
+.maximized .headline{
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+}
+
+.minimized{
+    height: 64px;
+    overflow: hidden;
+    transition: all 1s !important;
+}
+
+@media (max-width: 400px) {
+    .minimized{
+        padding: 10px !important;
+    }
+}
