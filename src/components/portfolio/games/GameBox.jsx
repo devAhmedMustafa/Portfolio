@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function GameBox({game}){
     return (
         <div className="flex flex-col lg:flex-row justify-between p-5 text-white w-full">
