@@ -11,18 +11,18 @@ import UiDesignBox from './components/portfolio/ui designs/UiDesignBox'
 import UiDesigns from './assets/projects/UiDesigns'
 import MusicPlayer from './components/portfolio/music/MusicPlayer'
 import Soundtracks from './assets/projects/Music'
-import Skills from './components/containers/Skills'
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
   
 
   return (
+    <BrowserRouter>
+    
     <div className='flex flex-col items-center'>
       <div className='flex flex-col w-full p-2 lg:w-[60%] gap-4'>
         <Navbar/>
         <Head/>
-
-        <Skills/>
 
         <WindowContainer headline="Games Projects">
           {Games.map((game)=> <GameBox game={game} key={game.name} />)}
@@ -44,6 +44,8 @@ function App() {
         
       </div>
     </div>
+
+    </BrowserRouter>
   )
 }
 

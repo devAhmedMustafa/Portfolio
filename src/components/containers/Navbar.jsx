@@ -1,10 +1,24 @@
+import { Link } from "react-router-dom";
+
 export default function Navbar(){
     return (
         <div className="w-full bg-primary text-white my-1 rounded-full py-4">
             <ul className="list-none flex justify-center gap-6 text-lg">
-                <li><i className="fa-brands fa-x-twitter"></i></li>
-                <li><i className="fa-brands fa-instagram"></i></li>
-                <li><i className="fa-brands fa-linkedin"></i></li>
+                <li>
+                    <Link target="_blank" to="https://twitter.com/meAhmedMustafa">
+                        <i className="fa-brands fa-x-twitter"></i>
+                    </Link>
+                </li>
+                <li>
+                    <Link target="_blank" to="https://www.instagram.com/ahmedmustafa.u">
+                        <i className="fa-brands fa-instagram"></i>
+                    </Link>
+                </li>
+                <li>
+                    <Link target="_blank" to="https://www.linkedin.com/in/ahmedmustafadev/">
+                        <i className="fa-brands fa-linkedin"></i>
+                    </Link>
+                </li>
             </ul>
         </div>
     )
