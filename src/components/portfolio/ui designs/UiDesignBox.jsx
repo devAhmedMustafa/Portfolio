@@ -4,8 +4,8 @@ export default function UiDesignBox({design}){
             <h1 className="text-4xl">{design.name}</h1>
             <p>{design.desc}</p>
 
-            <div className="columns-2 lg:columns-3">
-                {design.images.map((img)=> <img src={img} alt=""/>)}
+            <div className="columns-2 lg:columns-4">
+                {design.images.map((img)=> <img className="mx-auto my-3 rounded-lg border-[#383838ea] border-2" src={img} alt=""/>)}
             </div>
         </div>
     )
