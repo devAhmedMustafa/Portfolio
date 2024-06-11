@@ -12,6 +12,9 @@ import UiDesigns from './assets/projects/UiDesigns'
 import MusicPlayer from './components/portfolio/music/MusicPlayer'
 import Soundtracks from './assets/projects/Music'
 import { BrowserRouter } from 'react-router-dom'
+import background from "@assets/videos/anime.mp4"
+import ParticleSystem from './components/graphics systems/Particle System'
+
 
 function App() {
   
@@ -19,7 +22,14 @@ function App() {
   return (
     <BrowserRouter>
     
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center min-h-screen'>
+
+      <video className="fixed left-0 min-w-full min-h-full object-cover -z-10 video-back" autoPlay muted loop>
+        <source src={background}/>
+      </video>
+
+      <ParticleSystem/>
+
       <div className='flex flex-col w-full p-2 lg:w-[60%] gap-4'>
         <Navbar/>
         <Head/>
@@ -39,7 +49,18 @@ function App() {
         <WindowContainer headline="Music Projects">
           {Soundtracks.map((soundtrack)=> <MusicPlayer soundtrack={soundtrack} key={soundtrack.link} />)}
         </WindowContainer>
-        <WindowContainer headline="Other Projects"/>
+
+        <WindowContainer headline="Other Projects">
+          <div className='flex flex-col gap-4'>
+
+            <h1 className="text-3xl">IAM Filter - Photo editing software</h1>
+
+            <p>A school assignment competition in making the best software with GUI in C++</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/V9BGwE7q-18?si=2Giaq5DsVVouvlYP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+          </div>
+        </WindowContainer>
 
         
       </div>

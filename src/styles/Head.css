@@ -1,4 +1,13 @@
 .title{
     font-family: 'Oswald';
-    -webkit-text-stroke: 4px white;
+    -webkit-text-stroke: 4px black;
+}
+
+@media (min-width: 300px) {
+
+    .title{
+
+        -webkit-text-stroke: 4px white;
+    }
+
 }

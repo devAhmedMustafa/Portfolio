@@ -21,25 +21,25 @@ export default function WindowContainer({children, headline}){
     }
 
     return (
-        <div className="border-2 border-black p-3 rounded-3xl minimized" id={id}>
+        <div className="border-b-2 border-b-white p-3 minimized" id={id}>
 
             <div className="flex justify-between">
                 <h1 className="text-3xl mb-3 headline">{headline}</h1>
 
                 <div className="flex gap-2">
                     <button onClick={Minimize}>
-                        <i className="fa-solid fa-minus bg-black w-6 h-6 text-white flex items-center justify-center rounded-full text-sm"></i>
+                        <i className="fa-solid fa-minus w-6 h-6 flex items-center justify-center rounded-full text-sm"></i>
                     </button>
 
                     <button onClick={ChangeWindowSize}>
-                        <i className="fa-regular fa-window-maximize bg-black w-6 h-6 text-white flex items-center justify-center rounded-full text-sm"></i>
+                        <i className="fa-regular fa-window-maximize w-6 h-6 items-center justify-center rounded-full text-sm"></i>
                     </button>
                 </div>
 
             </div>
 
 
-            <div className="bg-primary w-full flex flex-wrap">
+            <div className="bg-[#1818187a] w-full flex flex-wrap">
                 {children}
             </div>
         </div>

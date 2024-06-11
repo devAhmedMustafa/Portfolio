@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export default function ParticleSystem(){
 
     useEffect(()=>{
@@ -13,8 +15,8 @@ export default function ParticleSystem(){
         particle.className = "particle";
         particlesContainer.appendChild(particle);
 
-        const initialX = Math.random() * 10;
-        const initialY = Math.random() * 10;
+        const initialX = Math.random() * 1000;
+        const initialY = Math.random() * 1000;
 
         particle.style.left = initialX + "px";
         particle.style.top = initialY + "px";
@@ -29,10 +31,10 @@ export default function ParticleSystem(){
             const newX = currentX + velocityX;
             const newY = currentY + velocityY;
 
-            if (newX <= 0 || newX >= 700) {
+            if (newX <= 0 || newX >= window.innerWidth) {
                 velocityX *= -1;
             }
-            if (newY <= 0 || newY >= 200) {
+            if (newY <= 0 || newY >= window.innerHeight) {
                 velocityY *= -1;
             }
 
@@ -48,6 +50,6 @@ export default function ParticleSystem(){
     }, [])
 
     return (
-        <div className="particle-container" id="particle-container"></div>
+        <div className="particle-container fixed top-500 left-500 w-full h-full" id="particle-container"></div>
     )
 }

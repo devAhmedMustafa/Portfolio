@@ -13,6 +13,11 @@ const Webapps = [
         name: "Star Plus Games",
         link: "https://starplusgames.vercel.app/",
         desc: "An online platform for playing StarPlus games."
+    },
+    {
+        name: "Link Plus",
+        link: "https://linkpluss.vercel.app/",
+        desc: "A centeral application to save messages and links cross platfroms"
     }
 ]
 

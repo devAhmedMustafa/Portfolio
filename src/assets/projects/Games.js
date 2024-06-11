@@ -8,6 +8,11 @@ const Games = [
         name: "Not free yet",
         link: "https://www.youtube.com/embed/YV8mPZ22xVM?si=nmcWrbk6SlDfrwhh",
         game_link: "https://dodo3142.itch.io/not-free-yet"
+    },
+    {
+        name: "Spring",
+        link: "https://www.youtube.com/embed/8wo5ayPjAVE?si=of1kaFdRXeHbU3fo",
+        game_link: "https://starplusgames.vercel.app/Spring"
     }
 ]
 
