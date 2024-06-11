@@ -21,7 +21,7 @@ export default function WindowContainer({children, headline}){
     }
 
     return (
-        <div className="border-b-2 border-b-white p-3 minimized" id={id}>
+        <div className="border-b-2 border-b-white p-3 minimized z-50" id={id}>
 
             <div className="flex justify-between">
                 <h1 className="text-3xl mb-3 headline">{headline}</h1>
