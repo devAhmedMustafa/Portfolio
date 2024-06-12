@@ -16,6 +16,8 @@
     display: none;
 }
 
+
+
 @media (min-width: 300px) {
     
     .video-back{
@@ -26,5 +28,8 @@
 @media (min-width: 300px) {
     *{
         color: white;
+    }
+    .shadow-image{
+        filter: invert(1)    
     }
 }

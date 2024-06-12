@@ -18,14 +18,22 @@
     width: 100%;
     text-align: center;
     font-size: larger;
+    display: block;
 }
 
-.maximized .minimize-btn{
-    display: none;
+.maximized .close-btn{
+    display: block;
+}
+
+.maximized .content{
+    display: flex;
+}
+
+.maximized .projects-icon{
+    display: none
 }
 
 .minimized{
-    height: 64px;
     overflow: hidden;
     transition: all 1s !important;
 }
@@ -34,4 +42,5 @@
     .minimized{
         padding: 10px !important;
     }
+    
 }
