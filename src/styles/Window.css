@@ -20,6 +20,10 @@
     font-size: larger;
 }
 
+.maximized .minimize-btn{
+    display: none;
+}
+
 .minimized{
     height: 64px;
     overflow: hidden;

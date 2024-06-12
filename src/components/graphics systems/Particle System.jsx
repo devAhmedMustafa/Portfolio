@@ -50,6 +50,6 @@ export default function ParticleSystem(){
     }, [])
 
     return (
-        <div className="particle-container" id="particle-container"></div>
+        <div className="particle-container -z-10" id="particle-container"></div>
     )
 }

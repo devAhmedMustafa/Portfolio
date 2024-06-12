@@ -21,13 +21,13 @@ export default function WindowContainer({children, headline}){
     }
 
     return (
-        <div className="border-b-2 border-b-white p-3 minimized z-50" id={id}>
+        <div className="border-b-2 border-b-white p-3 minimized" id={id}>
 
             <div className="flex justify-between">
                 <h1 className="text-3xl mb-3 headline">{headline}</h1>
 
                 <div className="flex gap-2">
-                    <button onClick={Minimize}>
+                    <button onClick={Minimize} className="minimize-btn">
                         <i className="fa-solid fa-minus w-6 h-6 flex items-center justify-center rounded-full text-sm"></i>
                     </button>
 
@@ -39,7 +39,7 @@ export default function WindowContainer({children, headline}){
             </div>
 
 
-            <div className="bg-[#1818187a] w-full flex flex-wrap">
+            <div className="bg-[#1818187a] w-full flex flex-wrap z-50">
                 {children}
             </div>
         </div>
