@@ -24,7 +24,8 @@ export default function WindowContainer({children, headline, symbol}){
         <div className="p-3 minimized" id={id}>
 
             <div className="flex justify-between">
-                <h1 className="text-3xl mb-3 headline hidden">{headline}</h1>
+
+            <h1 className="text-md mb-3 headline hidden">{headline}</h1>
 
                 <div className="flex gap-2">
                     
@@ -35,7 +36,9 @@ export default function WindowContainer({children, headline, symbol}){
 
             </div>
 
-            <div className="w-28 h-28 flex justify-center items-center">
+            <div className="w-28 h-28 flex justify-center flex-col items-center">
+
+                <h1 className="text-md mb-3 icon-title">{headline}</h1>
          
                 <button onClick={ChangeWindowSize} className="w-20 h-20 hover:w-24 hover:h-24 transition-all projects-icon">
                     <img src={symbol} className=" max-w-full max-h-full shadow-image"/>

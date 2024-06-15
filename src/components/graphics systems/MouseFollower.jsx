@@ -50,7 +50,7 @@ export default function MouseFollower(){
     }, [])
 
     return (
-        <div ref={boxRef} className="bg-[#6aa9f1] -z-10 w-36 h-36 blur-3xl absolute translate-x-[-50%] translate-y-[-50%]">
+        <div ref={boxRef} className="bg-[#87b5e949] -z-10 w-52 h-52 blur-3xl absolute translate-x-[-50%] translate-y-[-50%]">
 
         </div>
     )

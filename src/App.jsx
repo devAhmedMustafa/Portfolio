@@ -37,11 +37,11 @@ function App() {
 
       <ParticleSystem/>
 
-      <div className='flex flex-col w-full p-2 lg:w-[60%] gap-4'>
+      <div className='flex flex-col w-full p-2 gap-4 justify-center items-center'>
         <Navbar/>
         <Head/>
 
-        <div className='flex justify-around py-36 flex-col sm:flex-row'>
+        <div className='flex justify-around lg:py-36 lg:w-[60%] flex-col sm:flex-row'>
           <WindowContainer headline="Games Projects" symbol={gamepad}>
             {Games.map((game)=> <GameBox game={game} key={game.name} />)}
           </WindowContainer>
