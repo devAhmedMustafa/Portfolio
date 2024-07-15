@@ -1,3 +1,5 @@
+import leafImg from "@assets/icons/leaf_b.png"
+
 export default class Leaf {
     constructor(canvas) {
         this.canvas =canvas
@@ -9,7 +11,7 @@ export default class Leaf {
         this.angle = Math.random() * Math.PI * 2;
         this.angleSpeed = Math.random() * 0.02 - 0.01;
         this.img = new Image();
-        this.img.src = './src/assets/icons/leaf_b.png';
+        this.img.src = leafImg;
     }
 
     update() {
