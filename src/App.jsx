@@ -12,6 +12,7 @@ import MusicPlayer from './components/portfolio/music/MusicPlayer'
 import Soundtracks from './assets/projects/Music'
 import { BrowserRouter } from 'react-router-dom'
 import ParticleSystem from './components/graphics systems/Particle System'
+
 import MouseFollower from './components/graphics systems/MouseFollower'
 import LandingPage from './pages/LandingPage'
 import ProjectsPage from './pages/ProjectsPage'
@@ -21,17 +22,27 @@ import DarkModeSwitch from './components/elements/DarkModeSwitch'
 function Navigator(){
 
   const [current, setCurrent] = useState("home")
+  const [size, setSize] = useState(0)
   const NavRef = useRef();
+
+  const handleResize = ()=>{
+    const container = document.querySelector('#container');
+    const x = document.getElementById(current).offsetLeft;
+    console.log(x)
+    console.log(current)
+    const animate = ()=>{
+      container.style.transform = `translateX(-${x}px)`;
+      container.style.transition = "transform 0.8s ease-in-out";
+    }
+
+    animate()
+  }
   
-  useEffect(()=>{
-    addEventListener('resize', ()=>{
-      navigate("home");
-    })
-  }, )
 
   const navigate = (id)=>{
 
     setCurrent(id);
+
 
     const container = document.querySelector('#container');
     const x = document.getElementById(id).offsetLeft;

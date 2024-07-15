@@ -17,7 +17,7 @@ export default function ProjectContainer(){
 
             <div className="border-2 border-[#ffffff3f] w-full h-full rounded-lg bg-[#e6e6e67c] flex flex-col lg:flex-row shadow-2xl dark:border-[#0e0e0e2a] dark:bg-[#13131375]">
 
-                <div className="flex flex-row lg:flex-col gap-2 w-full lg:w-[10%] h-[10%] lg:h-full overflow-auto p-3 lg:p-6">
+                <div className="flex flex-row lg:flex-col gap-2 w-full lg:w-[10%] h-[10%] lg:h-full overflow-visible p-3 lg:p-6">
                     {Projects.map((p, id)=>
                         <button onClick={()=>{
                             setSection("info")

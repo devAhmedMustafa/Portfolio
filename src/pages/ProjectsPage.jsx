@@ -2,7 +2,7 @@ import ProjectContainer from "../components/containers/ProjectsContainer";
 
 export default function ProjectsPage(){
     return(
-        <div id="projects" className="inline-block w-screen h-screen lg:p-8 pt-20 overflow-y-scroll overflow-x-hidden lg:overflow-hidden">
+        <div id="projects" className="inline-block w-screen h-screen lg:p-8 pt-20 overflow-y-scroll overflow-x-visible lg:overflow-visible">
 
             <div className="lg:h-full relative">
                 
