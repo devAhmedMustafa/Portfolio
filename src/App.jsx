@@ -11,13 +11,7 @@ import UiDesigns from './assets/projects/UiDesigns'
 import MusicPlayer from './components/portfolio/music/MusicPlayer'
 import Soundtracks from './assets/projects/Music'
 import { BrowserRouter } from 'react-router-dom'
-import background from "@assets/videos/anime.mp4"
 import ParticleSystem from './components/graphics systems/Particle System'
-import gamepad from "@assets/icons/controller-pad.png"
-import web from "@assets/icons/world-wide-web.png"
-import ux from "@assets/icons/ux-design.png"
-import music from "@assets/icons/music-note.png"
-import other from "@assets/icons/idea.png"
 import MouseFollower from './components/graphics systems/MouseFollower'
 import LandingPage from './pages/LandingPage'
 import ProjectsPage from './pages/ProjectsPage'
