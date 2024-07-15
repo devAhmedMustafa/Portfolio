@@ -6,7 +6,7 @@
     border: rgb(29 78 216) 0.2em solid;
     border-radius: 30px;
     text-align: right;
-    transition: all 0.6s ease;
+    transition: all 0.4s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,16 +17,21 @@
     background-color: rgb(29 78 216 / 1);
     cursor: pointer;
   }
+
+  .button:hover .text{
+    color: #fff;
+  }
   
   .button svg {
     width: 1.6em;
     display: flex;
-    transition: all 0.6s ease;
+    transition: all 0.2s ease;
   }
   
-  /* .button:hover svg {
+  .button:hover svg {
+    stroke: white;
     transform: translateX(5px);
-  } */
+  }
   
   .text {
     margin: 0 1.5em

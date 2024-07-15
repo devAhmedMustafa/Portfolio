@@ -88,7 +88,7 @@ function DownloadCV(){
                 strokeLinecap="round"
                 ></path>
             </svg>
-            <a href={cv} download="Ahmed's Resume.pdf">Download Cv</a>
+            <a href={cv} download="Ahmed's Resume.pdf">Download CV</a>
             </button>
 
         </div>

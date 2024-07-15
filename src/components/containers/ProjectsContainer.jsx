@@ -17,12 +17,12 @@ export default function ProjectContainer(){
 
             <div className="border-2 border-[#ffffff3f] w-full h-full rounded-lg bg-[#e6e6e67c] flex flex-col lg:flex-row shadow-2xl dark:border-[#0e0e0e2a] dark:bg-[#13131375]">
 
-                <div className="flex flex-row lg:flex-col gap-2 w-full lg:w-[10%] h-[10%] lg:h-full overflow-auto p-3 lg:p-6">
+                <div className="flex flex-row lg:flex-col gap-2 w-full lg:w-[20%] h-[10%] lg:h-full overflow-auto p-3 lg:p-6">
                     {Projects.map((p, id)=>
                         <button onClick={()=>{
                             setSection("info")
                             setSelected(id);
-                        }} className="text-start w-fit whitespace-nowrap text-lg p-2" key={id}>
+                        }} className="text-start w-fit whitespace-nowrap text-xl p-2" key={id}>
                             <p>{p.name}</p>
                         </button>
                     )}
@@ -30,7 +30,7 @@ export default function ProjectContainer(){
 
                 <div className="w-full h-full flex flex-col gap-6 bg-[#fdfdfd96] p-3 lg:p-6 dark:bg-[#00000094]">
 
-                    <div className="w-full h-[7%] rounded-full flex items-center p-3 lg:px-7 gap-10 text-lg">
+                    <div className="w-full h-[7%] rounded-full flex items-center p-3 lg:px-7 gap-5 text-lg">
 
                         <SectionContext.Provider value={[section, setSection]}>
 
@@ -60,13 +60,6 @@ export default function ProjectContainer(){
                             }
 
                             {
-                            Projects[selected].social&&
-                            <Preview name={"social"}>
-                                <i className="fa-solid fa-globe"></i>
-                            </Preview>
-                            }
-
-                            {
                             Projects[selected].dev&&
                             <Preview name={"development"}>
                                 <i className="fa-solid fa-stairs"></i>
@@ -80,16 +73,7 @@ export default function ProjectContainer(){
 
                     {
                         section == "info" &&
-                        <div className="w-full rounded-xl p-3 lg:p-5 flex flex-col gap-6">
-                            <h1 className="text-4xl">
-                                {Projects[selected].name}
-                            </h1>
-                            <p>
-                                {Projects[selected].desc}
-                            </p>
-
-                            <a className="text-xl w-fit" target="_blank" href={Projects[selected].link}><ButtonUrl content={"Link"}/></a>
-                        </div>
+                        <InfoPreview/>
                     }
 
                     {
@@ -119,9 +103,44 @@ function Preview({children, name}){
     const [section, setSection] = useContext(SectionContext);
 
     return (
-        <button onClick={()=> setSection(name)} className="w-3 h-3 lg:w-6 lg:h-6 flex justify-center items-center text-lg">    
-            {children}
-        </button>
+        <div className="dark:bg-[#0000008e] bg-[#ffffffaf] flex items-center hover:gap-4 p-3 rounded-full show-text w-fit relative">
+            <button onClick={()=> setSection(name)} className="w-3 h-3 lg:w-6 lg:h-6 flex justify-center items-center text-lg">    
+                {children}
+            </button>
+            <h1 className="opacity-0 left-1/2 -translate-x-1/2 w-fit absolute -bottom-9 bg-white px-2 dark:bg-black rounded-full">{name}</h1>
+        </div>
+    )
+}
+
+function InfoPreview(){
+
+    const [selected, setSelected] = useContext(SelectContext)
+
+    return (
+        <div className="w-full rounded-xl p-3 lg:p-5 flex flex-col gap-6">
+            <h1 className="lg:text-7xl text-5xl">
+                {Projects[selected].name}
+            </h1>
+            <p className="text-xl">
+                {Projects[selected].desc}
+            </p>
+
+            {
+                Projects[selected].social&&
+                <SocialSection/>
+            }
+
+            <a className="text-xl w-fit" target="_blank" href={Projects[selected].link}><ButtonUrl content={"Link"}/></a>
+        </div>
+    )
+}
+
+function SocialSection(){
+    const [selected, setSelected] = useContext(SelectContext)
+    return (
+        <div>
+            
+        </div>
     )
 }
 
@@ -130,7 +149,7 @@ function ImagesPreview(){
     const [selected, setSelected] = useContext(SelectContext)
 
     return (
-        <div className="w-full h-full rounded-xl p-3 lg:p-5 flex flex-wrap overflow-scroll gap-3">
+        <div className="w-full h-full justify-center rounded-xl p-3 lg:p-5 flex flex-wrap overflow-scroll gap-3">
             {
                 Projects[selected].images.map((img, id)=> <BlobImage key={id} url={img}/>)
             }

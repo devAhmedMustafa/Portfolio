@@ -56,6 +56,30 @@ const Projects = [
         name: "Spring",
         yt: "https://www.youtube.com/embed/8wo5ayPjAVE?si=of1kaFdRXeHbU3fo",
         link: "https://starplusgames.vercel.app/Spring"
+    },
+
+
+    {
+        name: "Computer Art",
+        desc: "In this project, I applied various basic math concepts to achieve fascinating results. For example, I used trigonometry to create a Sine wave project, which allowed me to explore the intricate relationships between angles and oscillations. Additionally, I delved into the principles of oscillation motion to bring more dynamic elements to the artwork. To add complexity and depth, I incorporated Perlin noise, which is a type of gradient noise used to generate natural-looking textures. This helped me create a grid of vectors that hold angles to direct particle velocity, making the movement of particles appear more organic and fluid. Moreover, I employed polar coordinates and circle equations to further enhance the visual appeal of the project. By representing points in a circular manner, I was able to create more harmonious and aesthetically pleasing patterns.Lastly, I integrated audio analysis and representation, which added an interactive dimension to the project. By analyzing audio input, I was able to modify the visual elements based on the sound, creating a synchronized audio-visual experience. This project allowed me to blend my technical skills with artistic creativity, resulting in a unique piece of computer art that showcases the potential of combining math, programming, and visual design.",
+        yt: "https://www.youtube.com/embed/gkKdwX-k9KA?si=T4R06M-EWaCbmeut",
+        link: "https://computer-art-iota.vercel.app/",
+        embed: "https://computer-art-iota.vercel.app/",
+        images: [
+            "https://myworkportfolio.blob.core.windows.net/mine/computer-art (1).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/computer-art (2).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/computer-art (3).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/computer-art (4).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/computer-art (5).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/computer-art (6).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/computer-art (7).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/computer-art (8).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/computer-art (9).png",
+        ],
+        social: {
+            github: "https://github.com/devAhmedMustafa/Computer-Art",
+            linkedin: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7217238822374260737"
+        }
     }
 ]
 
