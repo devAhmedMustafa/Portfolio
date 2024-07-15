@@ -3,11 +3,12 @@
     -webkit-text-stroke: 4px black;
 }
 
-@media (min-width: 300px) {
+.dark .title{
+    -webkit-text-stroke: white;
+}
 
+@media (max-width: 770px) {
     .title{
-
-        -webkit-text-stroke: 4px white;
+        -webkit-text-stroke: 2px;
     }
-
 }

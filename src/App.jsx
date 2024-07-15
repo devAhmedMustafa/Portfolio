@@ -1,6 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import './App.css'
-import Navbar from './components/containers/Navbar'
 import Head from './components/containers/Head'
 import WindowContainer from './components/containers/WindowContainer'
 import Games from './assets/projects/Games'
@@ -20,7 +19,51 @@ import ux from "@assets/icons/ux-design.png"
 import music from "@assets/icons/music-note.png"
 import other from "@assets/icons/idea.png"
 import MouseFollower from './components/graphics systems/MouseFollower'
+import LandingPage from './pages/LandingPage'
+import ProjectsPage from './pages/ProjectsPage'
+import AboutPage from './pages/AboutPage'
+import DarkModeSwitch from './components/elements/DarkModeSwitch'
 
+function Navigator(){
+
+  const [current, setCurrent] = useState("home")
+  const NavRef = useRef();
+  
+  useEffect(()=>{
+    addEventListener('resize', ()=>{
+      navigate("home");
+    })
+  }, )
+
+  const navigate = (id)=>{
+
+    setCurrent(id);
+
+    const container = document.querySelector('#container');
+    const x = document.getElementById(id).offsetLeft;
+    
+    const animate = ()=>{
+      container.style.transform = `translateX(-${x}px)`;
+      container.style.transition = "transform 0.8s ease-in-out";
+    }
+
+    animate()
+    // console.log(id)
+  }
+
+  return (
+    <>
+      <div className="navigator bg-[#ffffff79] dark:bg-[#08080886] fixed z-50 top-2 rounded-full left-1/2 -translate-x-1/2 px-6 py-3">
+        <ul className="flex gap-10 text-lg text-black">
+          <button onClick={()=> navigate('home')}><i className="fa-solid fa-house text-black dark:text-white"></i></button>
+          <button onClick={()=> navigate('projects')}><i className="fa-solid fa-briefcase text-black dark:text-white"></i></button>
+          <button onClick={()=> navigate('about')}><i className="fa-solid fa-user text-black dark:text-white"></i></button>
+        </ul>
+      </div>
+
+    </>
+  )
+}
 
 
 function App() {
@@ -28,20 +71,25 @@ function App() {
 
   return (
     <BrowserRouter>
+
     
-    <div className='flex flex-col items-center min-h-screen'>
+    <div>
 
-      <video className="fixed left-0 min-w-full min-h-full object-cover -z-10 video-back" autoPlay muted loop>
-        <source src={background}/>
-      </video>
+        <Navigator/>
+        <DarkModeSwitch/>
 
-      <ParticleSystem/>
+        <div id='container' className='fixed top-0 left-0 w-fit h-fit flex items-start justify-start'>
 
-      <div className='flex flex-col w-full p-2 gap-4 justify-center items-center'>
-        <Navbar/>
-        <Head/>
+        
+          <LandingPage/>
+          <ProjectsPage/>
+          <AboutPage/>
+          
+        </div>
 
-        <div className='flex justify-around lg:py-36 lg:w-[60%] flex-col sm:flex-row'>
+        {/* <Head/> */}
+
+        {/* <div className='flex justify-around lg:py-36 lg:w-[60%] flex-col sm:flex-row'>
           <WindowContainer headline="Games Projects" symbol={gamepad}>
             {Games.map((game)=> <GameBox game={game} key={game.name} />)}
           </WindowContainer>
@@ -69,12 +117,10 @@ function App() {
 
             </div>
           </WindowContainer>
-        </div>
+        </div> */}
 
-        <MouseFollower/>
+        {/* <MouseFollower/> */}
 
-        
-      </div>
     </div>
 
     </BrowserRouter>
