@@ -117,7 +117,7 @@ function InfoPreview(){
     const [selected, setSelected] = useContext(SelectContext)
 
     return (
-        <div className="w-full rounded-xl p-3 lg:p-5 flex flex-col gap-6">
+        <div className="w-full h-full rounded-xl p-3 lg:p-5 flex flex-col gap-6 overflow-scroll">
             <h1 className="lg:text-7xl text-5xl">
                 {Projects[selected].name}
             </h1>
