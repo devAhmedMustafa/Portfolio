@@ -58,7 +58,7 @@ const Projects = [
         link: "https://starplusgames.vercel.app/Spring"
     },
 
-
+    // Computer Art
     {
         name: "Computer Art",
         desc: "In this project, I applied various basic math concepts to achieve fascinating results. For example, I used trigonometry to create a Sine wave project, which allowed me to explore the intricate relationships between angles and oscillations. Additionally, I delved into the principles of oscillation motion to bring more dynamic elements to the artwork. To add complexity and depth, I incorporated Perlin noise, which is a type of gradient noise used to generate natural-looking textures. This helped me create a grid of vectors that hold angles to direct particle velocity, making the movement of particles appear more organic and fluid. Moreover, I employed polar coordinates and circle equations to further enhance the visual appeal of the project. By representing points in a circular manner, I was able to create more harmonious and aesthetically pleasing patterns.Lastly, I integrated audio analysis and representation, which added an interactive dimension to the project. By analyzing audio input, I was able to modify the visual elements based on the sound, creating a synchronized audio-visual experience. This project allowed me to blend my technical skills with artistic creativity, resulting in a unique piece of computer art that showcases the potential of combining math, programming, and visual design.",
@@ -80,6 +80,39 @@ const Projects = [
             github: "https://github.com/devAhmedMustafa/Computer-Art",
             linkedin: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7217238822374260737"
         }
+    },
+
+    // Aura Space
+    {
+        name: "Aura Space",
+        desc: "Aura Space is a 3D space exploration game where user can explore solar system planets",
+        link: "https://aura-space.vercel.app/",
+        embed: "https://aura-space.vercel.app/",
+        images: [
+            "https://myworkportfolio.blob.core.windows.net/mine/aura-space (1).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/aura-space (2).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/aura-space (3).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/aura-space (4).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/aura-space (5).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/aura-space (6).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/aura-space (7).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/aura-space (8).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/aura-space (9).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/aura-space (10).png",
+        ]
+    },
+
+    // Whiteboard
+    {
+        name: "Whiteboard",
+        desc: "",
+        link: "https://w-board.vercel.app/",
+        embed: "https://w-board.vercel.app/",
+        images: [
+            "https://myworkportfolio.blob.core.windows.net/mine/w-board (1).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/w-board (2).png",
+            "https://myworkportfolio.blob.core.windows.net/mine/w-board (3).png",
+        ]
     }
 ]
 
