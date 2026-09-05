@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
+    import { contactData } from '$lib/data/contact';
 
 	let { scrollY = 0 }: { scrollY?: number } = $props();
 
@@ -125,7 +126,7 @@
 			class:opacity-0={!mounted}
 		>
 			<a
-				href="https://linkedin.com"
+				href={contactData.linkedinUrl}
 				target="_blank"
 				rel="noreferrer"
 				class="w-full border border-zinc-300 px-4 py-2.5 text-sm font-medium text-zinc-950 bg-white hover:border-zinc-950 hover:bg-zinc-50 transition-colors flex items-center justify-between gap-4 rounded-none group cursor-pointer"
@@ -139,7 +140,7 @@
 				<span class="material-symbols-outlined text-base text-zinc-500 group-hover:translate-x-1.5 group-hover:-translate-y-1.5 transition-transform duration-200 ease-out">north_east</span>
 			</a>
 			<a
-				href="https://github.com"
+				href={contactData.githubUrl}
 				target="_blank"
 				rel="noreferrer"
 				class="w-full border border-zinc-300 px-4 py-2.5 text-sm font-medium text-zinc-950 bg-white hover:border-zinc-950 hover:bg-zinc-50 transition-colors flex items-center justify-between gap-4 rounded-none group cursor-pointer"

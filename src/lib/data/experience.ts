@@ -6,11 +6,11 @@ export interface ExperienceItem {
 	previewImage?: string;
 }
 
-export const totalYearsOfExperience = '2+ years of experience';
+export const totalYearsOfExperience = 2;
 
 export const experienceData: ExperienceItem[] = [
 	{
-		id: 'kumpin',
+		id: 'fawry',
 		company: 'Fawry',
 		role: 'Full-Stack Engineering Intern',
 		period: 'Aug 2026 - Now',

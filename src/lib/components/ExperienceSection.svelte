@@ -22,7 +22,7 @@
 		</div>
 
 		<div class="text-xs sm:text-sm font-semibold text-zinc-400 tracking-wider">
-			{totalYearsOfExperience}
+			{totalYearsOfExperience}+ years of experience
 		</div>
 	</div>
 
