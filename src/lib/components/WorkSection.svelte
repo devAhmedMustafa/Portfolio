@@ -142,7 +142,7 @@
 					{#key activeProjectIndex}
 						{@const currentPreviews = builtProjects[activeProjectIndex]?.previews || []}
 						<div class="flex flex-col gap-3 w-full transition-all duration-500 ease-out">
-							{#if currentPreviews.length === 1}
+							{#if currentPreviews.length == 1}
 								<!-- 1 Preview Image (Full Featured Width) -->
 								<div class="w-full aspect-[16/10] overflow-hidden group relative rounded-none border border-zinc-200">
 									<img
