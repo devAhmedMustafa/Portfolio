@@ -1,8 +1,42 @@
-# React + Vite
+# sv
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-Currently, two official plugins are available:
+## Creating a project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+If you're seeing this, you've probably already done this step. Congrats!
+
+```sh
+# create a new project
+npx sv create my-app
+```
+
+To recreate this project with the same configuration:
+
+```sh
+# recreate this project
+npx sv@0.17.0 create --template minimal --types ts --add tailwindcss="plugins:none" ai-tools="ide:gemini+tools:mcp,svelte-code-writer,svelte-core-bestpractices,svelte-file-editor+mcpSetup:local" --install npm ./
+```
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```sh
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```sh
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

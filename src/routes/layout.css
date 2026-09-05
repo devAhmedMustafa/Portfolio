@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@theme {
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'JetBrains Mono', monospace;
+}
+
+html, body {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+@utility stroke-text {
+  -webkit-text-stroke: 2px #09090b;
+  color: transparent;
+}
+
+@utility stroke-text-white {
+  -webkit-text-stroke: 2px #ffffff;
+  color: transparent;
+}
+
+/* Ensure default sharp corners across buttons, inputs, images, and cards */
+*, ::before, ::after {
+  border-radius: 0px !important;
+}
