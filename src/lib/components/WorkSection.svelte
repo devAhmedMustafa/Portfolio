@@ -81,21 +81,20 @@
 								{builtProjects[activeProjectIndex].title}
 							</h3>
 
-							<p class="text-zinc-600 text-sm leading-relaxed mb-5">
-								{builtProjects[activeProjectIndex].tagline}
-							</p>
+							<div class="text-zinc-600 text-sm leading-relaxed mb-5 space-y-3 [&_p]:leading-relaxed pl-6">
+								{@html builtProjects[activeProjectIndex].description || builtProjects[activeProjectIndex].tagline || ''}
+							</div>
 
 							<!-- Tech Stack Tags -->
 							<div class="flex flex-wrap gap-2 mb-6">
 								{#each builtProjects[activeProjectIndex].tags as tag (tag)}
-									<span class="px-3 py-1 text-xs font-medium border border-zinc-300 bg-zinc-50 text-zinc-800 rounded-none">
-										{tag}
-									</span>
+									{tag}
 								{/each}
 							</div>
-
+							
+							{#if builtProjects[activeProjectIndex].links?.url}
 							<a
-								href="https://github.com"
+								href={builtProjects[activeProjectIndex].links?.url}
 								target="_blank"
 								rel="noreferrer"
 								class="inline-flex items-center gap-2 bg-zinc-950 text-white px-5 py-2.5 text-xs font-bold uppercase rounded-none hover:bg-zinc-800 transition-colors group cursor-pointer w-fit"
@@ -103,12 +102,13 @@
 								<span>View Project</span>
 								<span class="material-symbols-outlined text-base group-hover:translate-x-1.5 group-hover:-translate-y-1.5 transition-transform duration-200 ease-out">north_east</span>
 							</a>
+							{/if}
 						</div>
 					{/key}
 				</div>
 
 				<!-- Middle Column: Perfectly Centered Vertical Axis & Dynamic Logo Slider (2/12 Width) -->
-				<div class="lg:col-span-2 flex justify-center items-center relative py-12 h-[380px] overflow-hidden">
+				<div class="lg:col-span-2 flex justify-center items-center relative py-12 h-95 overflow-hidden">
 					<!-- Central Vertical Hairline Axis -->
 					<div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-0.5 bg-zinc-200 z-0"></div>
 
@@ -144,7 +144,7 @@
 						<div class="flex flex-col gap-3 w-full transition-all duration-500 ease-out">
 							{#if currentPreviews.length == 1}
 								<!-- 1 Preview Image (Full Featured Width) -->
-								<div class="w-full aspect-[16/10] overflow-hidden group relative rounded-none border border-zinc-200">
+								<div class="w-full aspect-16/10 overflow-hidden group relative rounded-none border border-zinc-200">
 									<img
 										src={currentPreviews[0]}
 										alt={`Primary preview for ${builtProjects[activeProjectIndex].title}`}
@@ -154,14 +154,14 @@
 							{:else if currentPreviews.length === 2}
 								<!-- 2 Preview Images (Side-by-side) -->
 								<div class="grid grid-cols-2 gap-3 w-full">
-									<div class="col-span-1 aspect-[4/3] overflow-hidden group relative rounded-none border border-zinc-200">
+									<div class="col-span-1 aspect-4/3 overflow-hidden group relative rounded-none border border-zinc-200">
 										<img
 											src={currentPreviews[0]}
 											alt={`Preview 1 for ${builtProjects[activeProjectIndex].title}`}
 											class="w-full h-full object-cover filter contrast-[1.02] grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
 										/>
 									</div>
-									<div class="col-span-1 aspect-[4/3] overflow-hidden group relative rounded-none border border-zinc-200">
+									<div class="col-span-1 aspect-4/3 overflow-hidden group relative rounded-none border border-zinc-200">
 										<img
 											src={currentPreviews[1]}
 											alt={`Preview 2 for ${builtProjects[activeProjectIndex].title}`}
@@ -171,7 +171,7 @@
 								</div>
 							{:else if currentPreviews.length >= 3}
 								<!-- 3+ Preview Images (1 Top Featured + 2 Bottom Side-by-side) -->
-								<div class="w-full aspect-[16/9] overflow-hidden group relative rounded-none border border-zinc-200">
+								<div class="w-full aspect-video overflow-hidden group relative rounded-none border border-zinc-200">
 									<img
 										src={currentPreviews[0]}
 										alt={`Primary preview for ${builtProjects[activeProjectIndex].title}`}
@@ -180,14 +180,14 @@
 								</div>
 
 								<div class="grid grid-cols-2 gap-3 w-full">
-									<div class="col-span-1 aspect-[4/3] overflow-hidden group relative rounded-none border border-zinc-200">
+									<div class="col-span-1 aspect-4/3 overflow-hidden group relative rounded-none border border-zinc-200">
 										<img
 											src={currentPreviews[1]}
 											alt={`Secondary preview 1 for ${builtProjects[activeProjectIndex].title}`}
 											class="w-full h-full object-cover filter contrast-[1.02] grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
 										/>
 									</div>
-									<div class="col-span-1 aspect-[4/3] overflow-hidden group relative rounded-none border border-zinc-200">
+									<div class="col-span-1 aspect-4/3 overflow-hidden group relative rounded-none border border-zinc-200">
 										<img
 											src={currentPreviews[2]}
 											alt={`Secondary preview 2 for ${builtProjects[activeProjectIndex].title}`}

@@ -10,10 +10,15 @@ export const totalYearsOfExperience = 2;
 
 export const experienceData: ExperienceItem[] = [
 	{
+		id: 'ekson',
+		company: "Ekson Technology",
+		role: 'Full-Stack Engineering Intern',
+		period: 'Aug 2026 - Sep 2026',
+	},
+	{
 		id: 'fawry',
 		company: 'Fawry',
-		role: 'Full-Stack Engineering Intern',
+		role: 'Software Engineering Intern',
 		period: 'Aug 2026 - Now',
-		previewImage: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop'
 	}
 ];
